@@ -26,7 +26,7 @@ bool isSubset_sum(int arr[],int n,int sum){
             }
         }
     }
-    return t[n+1][sum+1];
+    return t[n][sum];
 
 }
 int main(){
