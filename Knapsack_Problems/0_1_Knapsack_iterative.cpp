@@ -4,7 +4,7 @@ using namespace std;
 #define pii vector<pair<int,int>>
 int t[1001][1001];
 
-void Knapsack(int wt[],int val[],int n, int w){
+int Knapsack(int wt[],int val[],int n, int w){
 
     for(int i=0; i<=n; i++){
         for(int j=0; j<=w; j++){
@@ -19,6 +19,8 @@ void Knapsack(int wt[],int val[],int n, int w){
             }
         }
     }
+    return t[n][w];
+    
 
 
 }
@@ -28,7 +30,7 @@ int main(){
     int val[n]={1,4,5,7};
     int w=7;
     memset(t,-1,sizeof(t));
-    Knapsack(wt,val,w,n);
+    cout<<Knapsack(wt,val,w,n);
     cout<<t[3][3];
     
     return 0;
