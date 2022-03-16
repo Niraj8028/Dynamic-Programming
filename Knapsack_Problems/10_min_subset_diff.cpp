@@ -18,25 +18,23 @@ int minDiff(int arr[],int n,int range){
     }
     for(int i=1; i<=n; i++){
         for(int j=1; j<=range; j++){
-            if(arr[i]<j){
+            if(arr[i-1]<j){
                 t[i][j]=(t[i-1][j-arr[i-1]] || t[i-1][j]);
             }
-            else{
+            else if(arr[i-1]<=j){
                 t[i][j]=t[i-1][j];
             }
         }
     }
-    vector<int>v;
+    int diff=INT_MAX;
     for(int i=0; i<=range/2; i++){
-        if(t[n][i]==true){
-            v.push_back(i);
+        if(t[n][i]==true && diff>abs(i-(range-i))){
+            diff=abs(i-(range-i));
+
         }
     }
-    int mn=INT_MAX;
-    for(int i=0; i<v.size(); i++){
-        mn=min(mn,range-2*v[i]);
-    }
-    return mn;
+    return diff;
+    
 }
 
 int main(){
