@@ -8,10 +8,10 @@ int noOfCoins(int arr[],int n,int k){
     for(int i=0; i<=n; i++){
         for(int j=0; j<=k; j++){
             if(j==0){
-                dp[0][j]=0;
+                dp[i][j]=0;
             }
             else if(i==0){
-                dp[i][0]=INT_MAX;
+                dp[i][j]=INT_MAX;
             }
             else if(arr[i-1]>j){
                 dp[i][j]=dp[i-1][j];
@@ -22,7 +22,7 @@ int noOfCoins(int arr[],int n,int k){
             }
         }
     }
-    cout<<dp[n][k];
+    return dp[n][k];
 }
 
 int main(){
