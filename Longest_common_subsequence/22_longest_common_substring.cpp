@@ -17,7 +17,7 @@ int longest_substring(string x,string y,int m,int n){
             for(int j=1; j<=n; j++){
                 if(x[i-1]==y[i-1]){
                     dp[i][j]=1+dp[i-1][j-1];
-                    mx++;
+                    
                 }
                 else{
                     
