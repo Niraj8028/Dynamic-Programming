@@ -16,7 +16,7 @@ int subsetCount(int arr[],int n, int sum){
         }
     }
     for(int i=1; i<=n; i++){
-        for(int j=1; j=sum; j++){
+        for(int j=1; j<=sum; j++){
             if(arr[i]<j){
                 t[i][j]=t[i-1][j]+t[i-1][j-arr[i-1]];
             }
