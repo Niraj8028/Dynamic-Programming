@@ -30,7 +30,7 @@ int maxSum(int arr[],int n){
         
     }
     if(total==mn){
-        return mn;
+        return mx;
     }
     int ans=total-(mn);
     return ans;
