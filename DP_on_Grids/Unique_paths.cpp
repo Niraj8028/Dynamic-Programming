@@ -15,11 +15,11 @@ int paths(int m,int n){
             
         }
     }
-    for(int i=0; i<=m; i++){
-        for(int j=0; j<=n; j++){
-            cout<<dp[i][j]<<" ";
-        }
-    }
+    // for(int i=0; i<=m; i++){
+    //     for(int j=0; j<=n; j++){
+    //         cout<<dp[i][j]<<" ";
+    //     }
+    // }
     return dp[m-1][n-1];
 }
 int main(){
