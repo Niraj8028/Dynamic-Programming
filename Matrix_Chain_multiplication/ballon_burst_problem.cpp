@@ -10,7 +10,6 @@ int score(int arr[],int n){
            for(int i=left; i<=right; i++){
                dp[left][right]=max(dp[left][right],arr[left-1]*arr[i]*arr[right+1]+arr[left]*arr[i-1]+arr[right]*arr[i+1]);
            }
-
         }
     }   
     for(int i=0; i<n; i++){
